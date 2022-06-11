@@ -38,6 +38,9 @@ const Principal = () => {
   return (
     
     <div className='container-virus-info'>
+        <h1>NewConfirmed {GlobalNewConfirmed}</h1>
+        <h1>NewDeaths {GlobalNewDeaths}</h1>
+        <h1>TotalDeaths {GlobalTotalDeaths}</h1>
         {
             
             countryInfo.map( pais => (
@@ -57,9 +60,7 @@ const Principal = () => {
                 </table>
             ))
         }
-        <h1>NewConfirmed {GlobalNewConfirmed}</h1>
-        <h1>NewDeaths {GlobalNewDeaths}</h1>
-        <h1>TotalDeaths {GlobalTotalDeaths}</h1>
+        
     </div>
   )
 }
