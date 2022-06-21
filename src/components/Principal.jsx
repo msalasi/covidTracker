@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 const Principal = () => {
     const [countryInfo, setCountryInfo] = useState([])
     const [GlobalNewConfirmed, setGlobalNewConfirmed] = useState([])
-    const [GlobalNewDeaths, setGlobalNewDeaths] = useState([])
+    const [TotalConmfirmed, setTotalConmfirmed] = useState([])
     const [GlobalTotalDeaths, setTotalDeaths] = useState([])
 
     useEffect(() => {
@@ -19,44 +19,45 @@ const Principal = () => {
             .then(function (response) {
                 let paises = response.data.Countries;
                 let newConfirmed = response.data.Global.NewConfirmed;
-                let newDeaths = response.data.Global.NewDeaths;
+                let totalConfirmed = response.data.Global.NewDeaths;
                 let newTotalDeaths = response.data.Global.TotalDeaths;
                 let global = response.data.Global;
                 console.log('paises', paises);
                 console.log('global', global);
                 setCountryInfo(paises);
                 setGlobalNewConfirmed(newConfirmed);
-                setGlobalNewDeaths(newDeaths);
+                setTotalConmfirmed(totalConfirmed);
                 setTotalDeaths(newTotalDeaths);
         }).catch(function (error) {
             console.error(error);
         });
     }, [])
-    
 
 
   return (
     
     <div className='container-virus-info'>
         <h1>NewConfirmed {GlobalNewConfirmed}</h1>
-        <h1>NewDeaths {GlobalNewDeaths}</h1>
+        <h1>NewDeaths {TotalConmfirmed}</h1>
         <h1>TotalDeaths {GlobalTotalDeaths}</h1>
         {
             
-            countryInfo.map( pais => (
+            countryInfo.filter( pais  => pais.Country === 'Chile').map( pais => (
                 <table key={pais.ID}>
-                    <tbody>
-                        <tr>
-                            <th>País:</th>
-                            <th>Total confirmados:</th>
-                            <th>Total muertos:</th>
-                        </tr>
-                        <tr>
-                            <td>{pais.Country}</td>
-                            <td>{pais.TotalConfirmed}</td>
-                            <td>{pais.TotalDeaths}</td>
-                        </tr>
-                    </tbody>
+                        <tbody>
+                            <tr>
+                                <th>País:</th>
+                                <th>Total de casos:</th>
+                                <th>Casos diarios:</th>
+                                <th>Ultimos fallecidos:</th>
+                            </tr>
+                            <tr>
+                                <td>{pais.Country}</td>
+                                <td>{pais.TotalConfirmed}</td>
+                                <td>{pais.NewConfirmed}</td>
+                                <td>{pais.NewDeaths}</td>
+                            </tr>
+                        </tbody>
                 </table>
             ))
         }
