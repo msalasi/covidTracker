@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         'bg-covid': '#b03432',
-      },
+      }
     },
   },
   plugins: [],
