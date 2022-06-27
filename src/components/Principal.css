@@ -1,7 +1,6 @@
-/* .container-virus-info{
-    background-image: url('../../public/assets/imgs/global-coronavirus-2019.jpg');
+.container-virus-info{
+    background-image: url('../../public/assets/imgs/covid-wallpaper-black.jpg');
     background-size: cover;
-    background-position: 75% 70%;
+    background-position: 50%;
     background-repeat: no-repeat;
-    height: 100vh;
-} */
+}

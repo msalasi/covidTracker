@@ -16,6 +16,7 @@ function useCountrys() {
         axios.request(options)
             .then(function (response) {
                 let paises = response.data.Countries;
+                console.log(paises);
                 let newConfirmed = response.data.Global.NewConfirmed;
                 let totalConfirmed = response.data.Global.NewDeaths;
                 let newTotalDeaths = response.data.Global.TotalDeaths;
