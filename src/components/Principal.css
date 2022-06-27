@@ -1,5 +1,5 @@
 .container-virus-info{
-    background-image: url('../../public/assets/imgs/covid-wallpaper-black.jpg');
+    background-image: url('../assets/imgs/covid-wallpaper-black.jpg');
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
