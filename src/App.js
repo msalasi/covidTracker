@@ -18,15 +18,15 @@ function App() {
           <h1 className="text-center text-2xl font-bold font-mono p-2 text-white rounded-lg bg-[#b03432] ">Contagios a nivel mundial</h1>
           <p className="text-white my-2">*Datos con un día de desfase*</p>
           <div className="w-full rounded-lg block sm:block md:flex lg:justify-evenly sm:gap-4 lg:w-5/6 xl:w-5/6 2xl:w-full ">
-            <div className="block text-center bg-white mx-auto mb-2 p-4 rounded-lg w-3/5 sm:w-1/3 md:w-2/5 lg:w-1/3 2xl:w-2/6 shadow-inner">
+            <div className="block text-center bg-white mx-auto mb-2 p-4 rounded-lg w-3/5 sm:w-1/3 md:w-2/5 lg:w-1/3 2xl:w-2/6 md:my-2">
               <h1 className="text-black font-mono text-base font-bold">Nuevos confirmados</h1>
               <p className="text-black font-mono text-base font-bold">{GlobalNewConfirmed}</p>
             </div>
-            <div className="block text-center bg-white mx-auto my-2 p-4 rounded-lg w-3/5 sm:w-1/3 md:w-2/5 lg:w-1/3 2xl:w-2/6">
+            <div className="block text-center bg-white mx-auto my-2 p-4 rounded-lg w-3/5 sm:w-1/3 md:w-2/5 lg:w-1/3 2xl:w-2/6 md:my-2">
               <h1 className="text-black font-mono text-base  font-bold">Nuevos muertos</h1>
               <p className="text-black font-mono text-base font-bold">{TotalConmfirmed}</p>
             </div>
-            <div className="block text-center bg-white mx-auto mt-2 p-4 rounded-lg w-3/5 sm:w-1/3 md:w-2/5 lg:w-1/3 2xl:w-2/6">
+            <div className="block text-center bg-white mx-auto mt-2 p-4 rounded-lg w-3/5 sm:w-1/3 md:w-2/5 lg:w-1/3 2xl:w-2/6 md:my-2">
               <h1 className="text-black font-mono text-base  font-bold">Total de muertos</h1>
               <p className="text-black font-mono text-base font-bold">{GlobalTotalDeaths}</p>
             </div>

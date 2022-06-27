@@ -1,1 +1,2 @@
-# Aplicacíon de covid tracker con react mas tailwind css para los estilos
+# Covid tracker aplication, builded with react js + tailwind css for the styles
+# Just clone repository, then write in CLI npm install and npm run start 
